@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+#ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
-gem 'bootstrap-sass', '2.3.20'
-
+gem 'bootstrap-sass', '~> 2.3.2.1'
 # Use sqlite3 as the database for Active Record
 
 
