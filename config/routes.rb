@@ -1,4 +1,5 @@
 Wifind::Application.routes.draw do
+  devise_for :users
   root 'static_pages#home'
   
   match '/findwifi', to: 'static_pages#findwifi', via: 'get'
