@@ -1,2 +1,14 @@
-<h1>Where do you want to use the internet?</h1>
-<p>Find me in app/views/static_pages/findwifi.html.erb</p>
+<% provide(:title, 'Find-WIFI')%>
+<div class="findwifi">
+	<div class="row container">
+		<div class="span9 offset1 center">
+			<h1>Where do you want to use the internet?</h1>
+			<ul class="nav inline">
+				<li><%= link_to "Makati", '#'%></li>
+				<li><%= link_to "Fort Bonifacio", '#'%></li>
+				<li><%= link_to "Quezon City", '#'%></li>
+				<li><%= link_to "Mandaluyong", '#'%></li>
+			</ul>
+		</div>
+	</div>
+</div>

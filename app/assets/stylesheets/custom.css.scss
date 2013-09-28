@@ -1,5 +1,82 @@
 @import "bootstrap";
+@mixin text_boxing{
+	position:relative;
+	top:65px;
+	background-color:black;
+	opacity:.99;
+	border-radius:5px 5px;
+	padding:10px;
+	
+}
 
+body{
+	
+padding-top: 70px;
+
+}
+
+.navbar{
+	background-color:black;
+}
+
+.center {
+	text-align:center;
+}
+
+#logo{
+
+	padding-top:15px;
+	text-transform:uppercase;
+	a{
+	color:white;
+	text-decoration:none;
+}
+	letter-spacing:-1;
+	font-weight:bold;
+	font-size:2em;
+
+}
+// css for home...
+div.home{
+	background-image:url('/images/wifindhome.png');
+	min-height:700px;
+	opacity:.7;
+	
+	div.span9{
+		@include text_boxing;		
+	}
+	h1{
+		color:white;
+	}
+	h3{
+		color:$grayLight;
+	}
+}
+// css for findwifi page
+div.findwifi{
+	background-color:$grayLight;
+	min-height:300px;
+	opacity:.8;
+	.row{
+	@include text_boxing;
+	height:100%;
+	h1{
+		color:white;
+	}
+	}
+}
+.nav{
+	display:inline;
+}
+.footer{
+	
+	height:60px;
+	background-color:black;
+	color:$grayLight;
+	.inline{
+		display:inline;
+	}
+}
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -12,3 +89,5 @@
 	margin-top: 45px;
 	@include box_sizing;
 }
+
+
