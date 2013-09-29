@@ -9,8 +9,12 @@
 			<li><%= link_to "Add Spot", '#' %></li>
 		</ul>
 		<ul class="nav pull-right">
-			<li class="pull-right"><%= link_to "Login", '#' %></li>
-			<li class="pull-right"><%= link_to "Sign up", '#'%></li>		
+			<% if user_signed_in? %>
+			<li><%= link_to "Sign out", signout_path, method: 'delete' %></li>
+			<% else %>
+				<li class="pull-right"><%= link_to "Login", signin_path %></li>
+				<li class="pull-right"><%= link_to "Sign up", signup_path %></li>		
+			<% end %>
 		</ul>
 	</div>
 	</div>

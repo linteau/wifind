@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def findwifi
+    redirect_to signup_path unless user_signed_in?
   end
 
   def about

@@ -6,6 +6,14 @@ Wifind::Application.routes.draw do
   match '/about', to: 'static_pages#about', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   
+  
+  # devise customizations
+  devise_scope :user do
+    match '/signup', to: 'devise/registrations#new', via: 'get'
+    match '/signin', to: 'devise/sessions#new', via: 'get'
+    match '/signout', to: 'devise/sessions#destroy', via: 'delete'   
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
