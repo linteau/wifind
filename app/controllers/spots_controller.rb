@@ -1,5 +1,6 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
+  before_filter :only_admin, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /spots
   # GET /spots.json
@@ -70,5 +71,9 @@ class SpotsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def spot_params
       params.require(:spot).permit(:name, :address, :phone, :price, :speed, :outlets, :review)
+    end
+    
+    def only_admin
+      redirect_to root_path unless current_user.admin?
     end
 end

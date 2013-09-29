@@ -12,6 +12,7 @@
 body{
 	
 padding-top: 75px;
+background-color:$grayLight;
 
 
 }
@@ -58,7 +59,7 @@ div.home{
 }
 // css for findwifi page
 div.findwifi{
-	background-color:$grayLight;
+//	background-color:$grayLight;
 	min-height:300px;
 	opacity:.8;
 	.row{
@@ -66,7 +67,7 @@ div.findwifi{
 	height:100%;
 	h1{
 		color:white;
-	}
+		}
 	}
 }
 .nav{
