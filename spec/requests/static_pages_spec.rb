@@ -25,7 +25,8 @@ describe "StaticPages" do
     
     describe "not signed in" do 
       before { visit findwifi_path }   
-      it { should have_selector('h2', text: "Sign up") }  
+      it { should have_selector('h2', text: "Sign in") }  
+      it { should have_selector('div.alert.alert-error') }
     end
     
      

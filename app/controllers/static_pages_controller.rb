@@ -3,7 +3,10 @@ class StaticPagesController < ApplicationController
   end
 
   def findwifi
-    redirect_to signup_path unless user_signed_in?
+    unless user_signed_in?
+      flash[:error] = 'You must login first to Find a Wifi spot near you.'
+      redirect_to signin_path 
+    end
   end
 
   def about

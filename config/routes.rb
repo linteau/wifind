@@ -1,4 +1,5 @@
 Wifind::Application.routes.draw do
+  resources :spots
   devise_for :users
   root 'static_pages#home'
   

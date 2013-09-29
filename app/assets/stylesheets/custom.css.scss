@@ -11,10 +11,14 @@
 
 body{
 	
-padding-top: 70px;
+padding-top: 75px;
+
 
 }
 
+div.alert{
+	margin-top:20px;
+}
 .navbar{
 	background-color:black;
 }
@@ -69,6 +73,7 @@ div.findwifi{
 	display:inline;
 }
 .footer{
+	margin-top:20px;
 	
 	height:60px;
 	background-color:black;
